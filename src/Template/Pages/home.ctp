@@ -58,7 +58,7 @@
               <nav class="navbar navbar-default">
                     <div class="collapse navbar-collapse " id="navbarCollapse">
                       <<ul class="nav nav-pills ">
-                          <li><a href="#welcome" class="scroll">Inicio</a></li>
+                          <li><a href="/rapitax/pages">Inicio</a></li>
                           <li><a href="#about" class="scroll">Nosotros</a></li>
                           <li><a href="#welcome" class="scroll">Servicios</a></li>
                           <li><a href="#contact" class="scroll">Contactanos</a></li>
@@ -70,7 +70,7 @@
             <div class="agileinfo-social-grids">
                 <ul>
                     <!-- <button type="button" class="btn btn-warning">Iniciar Sesion</button> -->
-                    <a href="/rapitax/servicios" class="nav-item nav-link"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
+                    <a href="/rapitax/users/login" class="nav-item nav-link"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
                 </ul>
             </div>
             <div class="clearfix"> </div>
@@ -331,7 +331,7 @@
                         </ul>
                     </div>
                     <div class="col-md-3 w3l-footer three">
-                        <h3>Contact Information</h3>
+                        <h3>Información de Contacto</h3>
                         <ul>
                             <li><i class="fa fa-map-marker"></i><p>RAPYTAX <span>Urb. Nicolás Garatea Mz 43 lt 32, </span>Nuevo Chimbote </p><div class="clearfix"></div> </li>
                         </ul>

@@ -1,5 +1,4 @@
 <!-- File: src/Template/Users/login.ctp -->
-<div>
 <?= $this->Form->create() ?>
     <fieldset>
         <legend><?= __('Please enter your username and password') ?></legend>
