@@ -30,11 +30,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<<<<<<< HEAD
-=======
-
-    
->>>>>>> d151899d954bc623f76423d3a58d57fe2ab9f4b7
     <div id="content">
             <?= $this->fetch('content') ?>
     </div>
