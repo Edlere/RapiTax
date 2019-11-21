@@ -57,13 +57,8 @@
             <div class="top-nav">
               <nav class="navbar navbar-default">
                     <div class="collapse navbar-collapse " id="navbarCollapse">
-<<<<<<< HEAD
                       <ul class="nav-item ">
-                          <li><a href="#welcome" class="scroll">Inicio</a></li>
-=======
-                      <<ul class="nav nav-pills ">
                           <li><a href="/rapitax/pages">Inicio</a></li>
->>>>>>> 213fdc47b26b466e74cc21c37b9c661166651e32
                           <li><a href="#about" class="scroll">Nosotros</a></li>
                           <li><a href="#welcome" class="scroll">Servicios</a></li>
                           <li><a href="#contact" class="scroll">Contactanos</a></li>
