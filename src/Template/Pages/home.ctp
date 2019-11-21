@@ -1,276 +1,401 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @since         0.10.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-use Cake\Cache\Cache;
-use Cake\Core\Configure;
-use Cake\Core\Plugin;
-use Cake\Datasource\ConnectionManager;
-use Cake\Error\Debugger;
-use Cake\Http\Exception\NotFoundException;
-
-$this->layout = false;
-
-if (!Configure::read('debug')) :
-    throw new NotFoundException(
-        'Please replace src/Template/Pages/home.ctp with your own version or re-enable debug mode.'
-    );
-endif;
-
-$cakeDescription = 'CakePHP: the rapid development PHP framework';
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $cakeDescription ?>
-    </title>
+<title>RAPITAX</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
-    <?= $this->Html->meta('icon') ?>
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
-    <?= $this->Html->css('home.css') ?>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="webroot/css/style.css" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- gallery -->
+<link href='css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+<!-- //gallery -->
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Arvo:400,400i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- //font -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+    });
+</script>
 </head>
-<body class="home">
-
-<header class="row">
-    <div class="header-image"><?= $this->Html->image('cake.logo.svg') ?></div>
-    <div class="header-title">
-        <h1>Welcome to CakePHP <?= Configure::version() ?> Red Velvet. Build fast. Grow solid.</h1>
-    </div>
-</header>
-
-<div class="row">
-    <div class="columns large-12">
-        <div class="ctp-warning alert text-center">
-            <p>Please be aware that this page will not be shown if you turn off debug mode unless you replace src/Template/Pages/home.ctp with your own version.</p>
+<body>
+    <!-- banner -->
+    <div class="banner jarallax">
+        <div class="header">
+            <div class="header-left">
+                <div class="agileinfo-phone">
+                    <p><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +51 982323781</p>
+                </div>
+                <div class="agileinfo-phone agileinfo-map">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"></i> Urb. Nicolás Garatea Mz 43 lt 32, Nuevo Chimbote</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
         </div>
-        <div id="url-rewriting-warning" class="alert url-rewriting">
-            <ul>
-                <li class="bullet problem">
-                    URL rewriting is not properly configured on your server.<br />
-                    1) <a target="_blank" href="https://book.cakephp.org/3.0/en/installation.html#url-rewriting">Help me configure it</a><br />
-                    2) <a target="_blank" href="https://book.cakephp.org/3.0/en/development/configuration.html#general-configuration">I don't / can't use URL rewriting</a>
-                </li>
-            </ul>
+        <div class="w3-header-bottom">
+            <div class="w3layouts-logo">
+                <h1>
+                      <a><img src="./images/logo.png" alt="Logo"></a>
+                </h1>
+            </div>
+
+            <div class="top-nav">
+              <nav class="navbar navbar-default">
+                    <div class="collapse navbar-collapse " id="navbarCollapse">
+                      <<ul class="nav nav-pills ">
+                          <li><a href="#welcome" class="scroll">Inicio</a></li>
+                          <li><a href="#about" class="scroll">Nosotros</a></li>
+                          <li><a href="#welcome" class="scroll">Servicios</a></li>
+                          <li><a href="#contact" class="scroll">Contactanos</a></li>
+                      </ul>
+                      <div class="clearfix"> </div>
+                  </div>
+              </nav>
+            </div>
+            <div class="agileinfo-social-grids">
+                <ul>
+                    <!-- <button type="button" class="btn btn-warning">Iniciar Sesion</button> -->
+                    <a href="/rapitax/servicios" class="nav-item nav-link"><button type="button" class="btn btn-warning">Iniciar Sesion</button></a>
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
         </div>
-        <?php Debugger::checkSecurityKeys(); ?>
-    </div>
-</div>
+        <div class="banner-info">
+            <div class="container">
+                <div class="w3-banner-info">
+                    <div class="slider">
+                        <div class="callbacks_container">
+                            <ul class="rslides callbacks callbacks1" id="slider4">
+                                <li>
+                                    <div class="w3layouts-banner-info">
+                                        <h3><span>Tax</span></h3>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w3layouts-banner-info">
+                                        <h3><span>RAPI</span></h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                                    <script>
+                                        // You can also use "$(window).load(function() {"
+                                        $(function () {
+                                          // Slideshow 4
+                                          $("#slider4").responsiveSlides({
+                                            auto: true,
+                                            pager:true,
+                                            nav:false,
+                                            speed: 400,
+                                            namespace: "callbacks",
+                                            before: function () {
+                                              $('.events').append("<li>before event fired.</li>");
+                                            },
+                                            after: function () {
+                                              $('.events').append("<li>after event fired.</li>");
+                                            }
+                                          });
 
-<div class="row">
-    <div class="columns large-6">
-        <h4>Environment</h4>
-        <ul>
-        <?php if (version_compare(PHP_VERSION, '5.6.0', '>=')) : ?>
-            <li class="bullet success">Your version of PHP is 5.6.0 or higher (detected <?= PHP_VERSION ?>).</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP is too low. You need PHP 5.6.0 or higher to use CakePHP (detected <?= PHP_VERSION ?>).</li>
-        <?php endif; ?>
-
-        <?php if (extension_loaded('mbstring')) : ?>
-            <li class="bullet success">Your version of PHP has the mbstring extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the mbstring extension loaded.</li>
-        <?php endif; ?>
-
-        <?php if (extension_loaded('openssl')) : ?>
-            <li class="bullet success">Your version of PHP has the openssl extension loaded.</li>
-        <?php elseif (extension_loaded('mcrypt')) : ?>
-            <li class="bullet success">Your version of PHP has the mcrypt extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the openssl or mcrypt extension loaded.</li>
-        <?php endif; ?>
-
-        <?php if (extension_loaded('intl')) : ?>
-            <li class="bullet success">Your version of PHP has the intl extension loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your version of PHP does NOT have the intl extension loaded.</li>
-        <?php endif; ?>
-        </ul>
+                                        });
+                                     </script>
+                                    <!--banner Slider starts Here-->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="columns large-6">
-        <h4>Filesystem</h4>
-        <ul>
-        <?php if (is_writable(TMP)) : ?>
-            <li class="bullet success">Your tmp directory is writable.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your tmp directory is NOT writable.</li>
-        <?php endif; ?>
+    <!-- //banner -->
+    <!-- welcome -->
+    <div class="welcome" id="welcome">
+        <div class="container">
+            <div class="wthree-heading">
+                <h2>NUESTROS SERVICIOS</h2>
+                <p>Viaja Seguro y Tranquilo con RapiTax</p>
+            </div>
+            <div class="col-md-3 w3-welcome-grid">
+                    <div class="w3-welcome-grid-info">
+                        <img src="images/6.jpg" alt="" />
+                        <h4>Taxi Directo</h4>
+                        <p>En Taxi Directo contamos con el servicio más seguro,confiable y amigable del mercado.Solicita tu servicio llamando al 930352896</p>
+                    </div>
+                </div>
+            <div class="col-md-3 w3-welcome-grid">
+                    <div class="w3-welcome-grid-info">
+                        <img src="images/3.jpg" alt="" />
+                        <h4>Taxi Corporativo</h4>
+                        <p>Modalidad de servicio de taxi preparado para cumplir necesidades corporativas. Con reportes personalizados y facturación centralizada.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3-welcome-grid">
+                    <div class="w3-welcome-grid-info">
+                        <img src="images/4.jpg" alt="" />
+                        <h4>Chofer de Reemplazo</h4>
+                        <p>Para toda eventualidad, evite el problema de conducir después de un día extenso de trabajo o de celebración.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 w3-welcome-grid">
+                    <div class="w3-welcome-grid-info">
+                        <img src="images/5.jpg" alt="" />
+                        <h4>Servicio de VAN</h4>
+                        <p>No siempre el espacio de un Taxi es suficiente, para eso ponemos a tu servicio nuestras Taxi Vans.</p>
+                    </div>
+                </div>
 
-        <?php if (is_writable(LOGS)) : ?>
-            <li class="bullet success">Your logs directory is writable.</li>
-        <?php else : ?>
-            <li class="bullet problem">Your logs directory is NOT writable.</li>
-        <?php endif; ?>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //welcome -->
+    <!-- team -->
+    <div class="team jarallax" id="team">
+        <div class="team-dot">
+            <div class="container">
+                <div class="wthree-heading about-heading">
+                    <h3>¿Por qué usar RapiTax?</h3>
+                </div>
+                <div class="agile-team-grids">
+                    <div class="col-sm-3 team-grid">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="images/t1.png" alt="" />
+                                </div>
+                                <div class="back">
+                                    <h4>Atención 24/7</h4>
+                                    <p>Disponibilidad las 24 horas, solo comunicate con nosotros a traves nuestro APP o a nuestra linea directa +51 982323781 / 043 432769</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 team-grid">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="images/t2.png" alt="" />
+                                </div>
+                                <div class="back">
+                                    <h4>Requerimientos especiales</h4>
+                                    <p>Si necesitas viajar con una silla de ruedas, una mascota o un bebe te enviaremos un taxi especial para ti. Puedes gestionar fácilmente tus direcciones de recojo habituales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 team-grid">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="images/t3.png" alt="" />
+                                </div>
+                                <div class="back">
+                                    <h4>Sigue tu trayecto sobre el mapa</h4>
+                                    <p>Con nuestro sistema conocerás en todo momento la ubicación de tu taxi y el recorrido que realiza.Tambien podras programa tus servicios anticipadamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 team-grid">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front">
+                                    <img src="images/t4.png" alt="" />
+                                </div>
+                                <div class="back">
+                                    <h4>Ahorra Dinero</h4>
+                                    <p>Configura tus gastos y tiempo por empleado, centros de costo y proyectos con precios acordados antes del trayecto, totalmente libres de sorpresas o de incrementos, sin importar la ruta o el tráfico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //team -->
+    <!-- blog -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="wthree-heading">
+                <h3>RAPITAX</h3>
+                <p>Vayas a donde vayas, tú siempre eliges la ruta.</p>
+            </div>
+            <div class="blog-agileinfo">
+                <div class="col-md-6 blog-w3grid-img">
+                    <a href="#myModal" data-toggle="modal" class="wthree-blogimg">
+                        <img src="images/4.jpg" class="img-responsive" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-6 blog-w3grid-text">
+                    <h4><a href="#myModal" data-toggle="modal">Nosotros</a></h4>
+                    <p>RapiTax, es una aplicación móvil, orientada a las empresas que brindan servicios de taxi, la cual les permite pider un servicio de transporte de manera rapida y segura. A través de esta aplicación podemos solicitar el servicio y a la vez hacer un seguimiento en tiempo real del trayecto, dando mayor seguridad y fidelidad a sus clientes.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="blog-agileinfo blog-agileinfo-mdl">
+                <div class="col-md-6 blog-w3grid-img blog-img-rght">
+                    <a href="#myModal" data-toggle="modal" class="wthree-blogimg">
+                        <img src="images/6.jpg" class="img-responsive" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-6 blog-w3grid-text">
+                    <h4><a href="#myModal" data-toggle="modal">¿Qué hacemos?</a></h4>
+                    <p>Brindamos seguridad en el servicio de taxi, a través de seguimiento de su trayecto mediante su movil en tiempo real.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="blog-agileinfo">
+                <div class="col-md-6 blog-w3grid-img">
+                    <a href="#myModal" data-toggle="modal" class="wthree-blogimg">
+                        <img src="images/5.jpg" class="img-responsive" alt=""/>
+                    </a>
+                </div>
+                <div class="col-md-6 blog-w3grid-text">
+                    <h4><a href="#myModal" data-toggle="modal">Nuestro Propósito</a></h4>
+                    <p>Mejorar la imagen de la industria del transporte en el país, retratarla como segura y eficiente.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!-- //blog -->
+    <!-- contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="wthree-heading">
+                <h3>Contactanos</h3>
+                <p>Rapitax,contamos con el servicio más seguro,confiable y amigable. Solicita tu taxi con solo un click</p>
+            </div>
+            <div class="contact-form">
+                <h4>Contactanos</h4>
+                <form action="#" method="post">
+                    <div class="fields-grid">
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Full Name" required="">
+                            <label>Apellidos y Nombres</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input agile-styled-input-top">
+                            <input type="text" name="Phone" required="">
+                            <label>Telefono</label>
+                            <span></span>
+                        </div>
+                        <div class="styled-input">
+                            <input type="email" name="Email" required="">
+                            <label>Email</label>
+                            <span></span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="styled-input textarea-grid">
+                        <textarea name="Message" required=""></textarea>
+                        <label>Mensaje</label>
+                        <span></span>
+                    </div>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- //contact -->
+    <!-- footer -->
+        <footer>
+            <div class="w3ls-footer-grids">
+                <div class="container">
+                    <div class="col-md-3 w3l-footer two">
+                        <h3>Redes Sociales</h3>
+                        <ul>
+                            <li><a class="fb" href="#"><i class="fa fa-facebook"></i>Siguenos en Facebook</a></li>
+                            <li><a class="fb1" href="#"><i class="fa fa-twitter"></i>Siguenos en Twitter</a></li>
 
-        <?php $settings = Cache::getConfig('_cake_core_'); ?>
-        <?php if (!empty($settings)) : ?>
-            <li class="bullet success">The <em><?= $settings['className'] ?>Engine</em> is being used for core caching. To change the config edit config/app.php</li>
-        <?php else : ?>
-            <li class="bullet problem">Your cache is NOT working. Please check the settings in config/app.php</li>
-        <?php endif; ?>
-        </ul>
-    </div>
-    <hr />
-</div>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3l-footer two">
+                        <h3> </h3>
+                        <ul>
+                            <li><a class="fb2" href="#"><i class="fa fa-google-plus"></i>Agreganos en Google</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3l-footer three">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li><i class="fa fa-map-marker"></i><p>RAPYTAX <span>Urb. Nicolás Garatea Mz 43 lt 32, </span>Nuevo Chimbote </p><div class="clearfix"></div> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 w3l-footer three">
+                        <h3> </h3>
+                        <ul>
+                            <li><i class="fa fa-phone"></i><p>982323781</p> <div class="clearfix"></div> </li>
+                            <li><i class="fa fa-envelope-o"></i><a href="mailto:rapitax@gmail.com">rapitax@gmail.com</a> <div class="clearfix"></div></li>
+                            <li><a href="./canvas.html">Nuestro modelo de negocio - CANVAS</a></li>
+                            <li><a href="./clientes_lista.html">Nuestros clientes</a></li>
+                            <li>
+                                <p>
+                                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                                        <img style="border:0;width:88px;height:31px"
+                                            src="http://jigsaw.w3.org/css-validator/images/vcss"
+                                            alt="Valid CSS!" />
+                                    </a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="copy-right-grids">
+                <div class="container">
+                    <div class="copy-left">
+                        <p class="footer-gd">© RAPITAX. | 2019</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </footer>
+    <!-- //footer -->
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/jarallax.js"></script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
 
-<div class="row">
-    <div class="columns large-6">
-        <h4>Database</h4>
-        <?php
-        try {
-            $connection = ConnectionManager::get('default');
-            $connected = $connection->connect();
-        } catch (Exception $connectionError) {
-            $connected = false;
-            $errorMsg = $connectionError->getMessage();
-            if (method_exists($connectionError, 'getAttributes')) :
-                $attributes = $connectionError->getAttributes();
-                if (isset($errorMsg['message'])) :
-                    $errorMsg .= '<br />' . $attributes['message'];
-                endif;
-            endif;
-        }
-        ?>
-        <ul>
-        <?php if ($connected) : ?>
-            <li class="bullet success">CakePHP is able to connect to the database.</li>
-        <?php else : ?>
-            <li class="bullet problem">CakePHP is NOT able to connect to the database.<br /><?= $errorMsg ?></li>
-        <?php endif; ?>
-        </ul>
-    </div>
-    <div class="columns large-6">
-        <h4>DebugKit</h4>
-        <ul>
-        <?php if (Plugin::isLoaded('DebugKit')) : ?>
-            <li class="bullet success">DebugKit is loaded.</li>
-        <?php else : ?>
-            <li class="bullet problem">DebugKit is NOT loaded. You need to either install pdo_sqlite, or define the "debug_kit" connection name.</li>
-        <?php endif; ?>
-        </ul>
-    </div>
-    <hr />
-</div>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
 
-<div class="row">
-    <div class="columns large-6">
-        <h3>Editing this Page</h3>
-        <ul>
-            <li class="bullet cutlery">To change the content of this page, edit: src/Template/Pages/home.ctp.</li>
-            <li class="bullet cutlery">You can also add some CSS styles for your pages at: webroot/css/.</li>
-        </ul>
-    </div>
-    <div class="columns large-6">
-        <h3>Getting Started</h3>
-        <ul>
-            <li class="bullet book"><a target="_blank" href="https://book.cakephp.org/3.0/en/">CakePHP 3.0 Docs</a></li>
-            <li class="bullet book"><a target="_blank" href="https://book.cakephp.org/3.0/en/tutorials-and-examples/cms/installation.html">The 20 min CMS Tutorial</a></li>
-        </ul>
-    </div>
-</div>
+            $().UItoTop({ easingType: 'easeOutQuart' });
 
-<div class="row">
-    <div class="columns large-12 text-center">
-        <h3 class="more">More about Cake</h3>
-        <p>
-            CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Front Controller and MVC.<br />
-            Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
-        </p>
-    </div>
-    <hr/>
-</div>
-
-<div class="row">
-    <div class="columns large-4">
-        <i class="icon support">P</i>
-        <h3>Help and Bug Reports</h3>
-        <ul>
-            <li class="bullet cutlery">
-                <a href="irc://irc.freenode.net/cakephp">irc.freenode.net #cakephp</a>
-                <ul><li>Live chat about CakePHP</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="http://cakesf.herokuapp.com/">Slack</a>
-                <ul><li>CakePHP Slack support</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://github.com/cakephp/cakephp/issues">CakePHP Issues</a>
-                <ul><li>CakePHP issues and pull requests</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="http://discourse.cakephp.org/">CakePHP Forum</a>
-                <ul><li>CakePHP official discussion forum</li></ul>
-            </li>
-        </ul>
-    </div>
-    <div class="columns large-4">
-        <i class="icon docs">r</i>
-        <h3>Docs and Downloads</h3>
-        <ul>
-            <li class="bullet cutlery">
-                <a href="https://api.cakephp.org/3.0/">CakePHP API</a>
-                <ul><li>Quick Reference</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://book.cakephp.org/3.0/en/">CakePHP Documentation</a>
-                <ul><li>Your Rapid Development Cookbook</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://bakery.cakephp.org">The Bakery</a>
-                <ul><li>Everything CakePHP</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://plugins.cakephp.org">CakePHP plugins repo</a>
-                <ul><li>A comprehensive list of all CakePHP plugins created by the community</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://github.com/cakephp/">CakePHP Code</a>
-                <ul><li>For the Development of CakePHP Git repository, Downloads</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://github.com/FriendsOfCake/awesome-cakephp">CakePHP Awesome List</a>
-                <ul><li>A curated list of amazingly awesome CakePHP plugins, resources and shiny things.</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://www.cakephp.org">CakePHP</a>
-                <ul><li>The Rapid Development Framework</li></ul>
-            </li>
-        </ul>
-    </div>
-    <div class="columns large-4">
-        <i class="icon training">s</i>
-        <h3>Training and Certification</h3>
-        <ul>
-            <li class="bullet cutlery">
-                <a href="https://cakefoundation.org/">Cake Software Foundation</a>
-                <ul><li>Promoting development related to CakePHP</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://training.cakephp.org/">CakePHP Training</a>
-                <ul><li>Learn to use the CakePHP framework</li></ul>
-            </li>
-            <li class="bullet cutlery">
-                <a href="https://certification.cakephp.org/">CakePHP Certification</a>
-                <ul><li>Become a certified CakePHP developer</li></ul>
-            </li>
-        </ul>
-    </div>
-</div>
-
+            });
+    </script>
 </body>
 </html>

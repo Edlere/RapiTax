@@ -14,7 +14,7 @@ body{
 }
 /*-- banner --*/
 .banner{
-    background: url(../images/2.jpg) no-repeat 0px 0px;
+    background: url(..webroot/img/2.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .jarallax {
@@ -391,7 +391,7 @@ ul.dropdown-menu li:after{
     text-decoration: none;
     width: 50px;
     height: 50px;
-    background: transparent url(../images/arrows.png) no-repeat left top;
+    background: transparent url(..webroot/img/arrows.png) no-repeat left top;
 }
 .callbacks_nav.next {
     left: auto;
@@ -574,7 +574,7 @@ ul.dropdown-menu li:after{
 /*-- //welcome --*/
 /*-- about --*/
 .about-bottom{
-    background: url(../images/1.jpg) no-repeat 0px 0px;
+    background: url(..webroot/img/1.jpg) no-repeat 0px 0px;
     background-size: cover;
 }
 .about-heading h3{
@@ -607,7 +607,7 @@ ul.dropdown-menu li:after{
 /*-- //about --*/
 /*-- offer --*/
 .offer-left{
-    background: url(../images/6.jpg) no-repeat 0px 0px;
+    background: url(..webroot/img/6.jpg) no-repeat 0px 0px;
     background-size: cover;
     min-height: 450px;
 }
@@ -701,7 +701,7 @@ ul.dropdown-menu li:after{
     -ms-transform: scale(0.8);
     transition: transform 0.5s, opacity 0.2s;
     transform: scale(0.8);
-    background: url(../images/search1.png) no-repeat 50% 50% rgba(0, 0, 0, 0.36);
+    background: url(..webroot/img/search1.png) no-repeat 50% 50% rgba(0, 0, 0, 0.36);
     opacity: 0;
 }
 .gallery-bg:hover.gallery-bg-text{
@@ -744,7 +744,7 @@ ul.dropdown-menu li:after{
     -ms-transform: scale(0.8);
     transition: transform 0.5s, opacity 0.2s;
     transform: scale(0.8);
-    background: url(../images/search1.png) no-repeat 50% 50% rgba(0, 0, 0, 0.36);
+    background: url(..webroot/img/search1.png) no-repeat 50% 50% rgba(0, 0, 0, 0.36);
     opacity: 0;
 }
 .gallery-small:hover.gallery-small-text{
@@ -802,7 +802,7 @@ ul.dropdown-menu li:after{
 /*-- //testimonial --*/
 /*-- team --*/
 .team{
-	background:url(../images/2.jpg) no-repeat 0px 0px;
+	background:url(..webroot/img/2.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 /* entire container, keeps perspective */
@@ -875,8 +875,8 @@ ul.dropdown-menu li:after{
     text-align: center;
 }
 
-/* 
-	Some vertical flip updates 
+/*
+	Some vertical flip updates
 */
 .vertical.flip-container {
 	position: relative;
@@ -989,7 +989,7 @@ ul.dropdown-menu li:after{
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
-    -ms-transition: 0.5s all;	
+    -ms-transition: 0.5s all;
 }
 .w3l-social ul li a i.fa.fa-rss:hover{
 	background: #f26522;
@@ -999,10 +999,10 @@ ul.dropdown-menu li:after{
 /*-- blog --*/
 .blog-agileinfo a.wthree-blogimg {
     display: block;
-    border: 3px solid #fff; 
+    border: 3px solid #fff;
     background-color: #000;
 	-webkit-transition: .5s all;
-	-moz-transition: .5s all; 
+	-moz-transition: .5s all;
 	transition: .5s all;
 	overflow:hidden;
 }
@@ -1012,7 +1012,7 @@ ul.dropdown-menu li:after{
 .blog-agileinfo a img.img-responsive {
     opacity: .5;
 	-webkit-transition: .5s all;
-	-moz-transition: .5s all; 
+	-moz-transition: .5s all;
 	transition: .5s all;
 	width: 100%;
 	-webkit-transform: scale(1);
@@ -1028,7 +1028,7 @@ ul.dropdown-menu li:after{
 	-o-transform: scale(1.5);
 	-ms-transform: scale(1.5);
 	transform: scale(1.5);
-} 
+}
 .blog-agileinfo a img:focus{
 	outline:none;
 }
@@ -1068,7 +1068,7 @@ ul.dropdown-menu li:after{
     -moz-transition: .5s all;
     transition: .5s all;
 }
-.blog-agileinfo h6 a:hover{ 
+.blog-agileinfo h6 a:hover{
     color: #888;
 }
 .blog-agileinfo p {
@@ -1079,11 +1079,11 @@ ul.dropdown-menu li:after{
 }
 .blog-w3grid-img.blog-img-rght {
     float: right;
-} 
+}
 /*-- //blog --*/
 /*-- rate --*/
 .rate {
-	background:url(../images/2.jpg) no-repeat 0px 0px;
+	background:url(..webroot/img/2.jpg) no-repeat 0px 0px;
 	background-size:cover;
 }
 .agileinfo-rate-grid-nfo {
@@ -1154,7 +1154,7 @@ ul.dropdown-menu li:after{
 }
 .styled-input.agile-styled-input-top {
     margin-top: 0;
-} 
+}
 .contact input[type="text"],.contact input[type="email"],.contact textarea{
     font-size: .9em;
     color: #999999;
@@ -1166,17 +1166,17 @@ ul.dropdown-menu li:after{
     -webkit-appearance: none;
 	outline: none;
 }
-.contact textarea { 
+.contact textarea {
 	min-height: 150px;
     resize: none;
-} 
+}
 /*-- input-effect --*/
 .styled-input input:focus ~ label, .styled-input input:valid ~ label,.styled-input textarea:focus ~ label ,.styled-input textarea:valid ~ label{
     font-size: .9em;
     color: #fec303;
     top: -1.3em;
     -webkit-transition: all 0.125s;
-	-moz-transition: all 0.125s; 
+	-moz-transition: all 0.125s;
 	-o-transition: all 0.125s;
 	-ms-transition: all 0.125s;
     transition: all 0.125s;
@@ -1222,18 +1222,18 @@ ul.dropdown-menu li:after{
     -moz-transition: all 0.125s;
     transition: all 0.125s;
 }
-.styled-input textarea ~ span { 
-    bottom: 5px; 
+.styled-input textarea ~ span {
+    bottom: 5px;
 }
-.styled-input input:focus.styled-input textarea:focus { 
-	outline: 0; 
-} 
+.styled-input input:focus.styled-input textarea:focus {
+	outline: 0;
+}
 .styled-input input:focus ~ span,.styled-input textarea:focus ~ span {
 	width: 100%;
 	-webkit-transition: all 0.075s;
-	-moz-transition: all 0.075s;  
-	transition: all 0.075s; 
-} 
+	-moz-transition: all 0.075s;
+	transition: all 0.075s;
+}
 /*-- //input-effect --*/
 .contact input[type="submit"] {
     outline: none;
@@ -1475,12 +1475,12 @@ i.fa-envelope-o {
 	bottom: 20px;
 	right: 2%;
 	overflow: hidden;
-	z-index: 999; 
+	z-index: 999;
 	width: 40px;
 	height: 40px;
 	border: none;
 	text-indent: 100%;
-	background: url(../images/arrow.png) no-repeat 0px 0px;
+	background: url(..webroot/img/arrow.png) no-repeat 0px 0px;
 }
 #toTopHover {
 	width: 40px;
