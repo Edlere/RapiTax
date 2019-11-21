@@ -47,7 +47,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [   //Controller post se cambia por un controlador del negocio, por eso el error de controller faltante
             'loginRedirect' => [
-                'controller' => 'Servicios',
+                'controller' => 'Servicios', //Luego que se logea a que controlador va, es decir que logica se sigue, o que verá
                 'action' => 'index'
             ],
             'logoutRedirect' => [
@@ -73,7 +73,7 @@ class AppController extends Controller
     // }
 
 
-    
+
         //Manda a la página de inicio, despúes de cerrar sesión
     public function beforeFilter(Event $event)
     {
