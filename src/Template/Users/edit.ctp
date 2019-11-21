@@ -4,9 +4,11 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<div class="top-nav large-12 medium-12 columns content">
+  <nav class="navbar navbar-expand-lg navbar-light text-white bg-dark">
+    <ul class="nav-item">
+      <a href="/rapitax/">
+      <li "nav-item"><?= $this->Html->image('logo.png')?></li></a>
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $user->id],
@@ -16,6 +18,7 @@
         <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
     </ul>
 </nav>
+</div>
 <div class="users form large-9 medium-8 columns content">
     <?= $this->Form->create($user) ?>
     <fieldset>
@@ -26,6 +29,6 @@
             echo $this->Form->control('password');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'),['class' =>'btn btn-warning']) ?>
     <?= $this->Form->end() ?>
 </div>

@@ -4,9 +4,11 @@
  * @var \App\Model\Entity\Servicio $servicio
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<div class="top-nav large-12 medium-12 columns content">
+  <nav class="navbar navbar-expand-lg navbar-light text-white bg-dark">
+    <ul class="nav-item">
+      <a href="/rapitax/">
+      <li "nav-item"><?= $this->Html->image('logo.png')?></li></a>
         <li><?= $this->Html->link(__('List Servicios'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Clientes'), ['controller' => 'Clientes', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Cliente'), ['controller' => 'Clientes', 'action' => 'add']) ?></li>
@@ -18,6 +20,7 @@
         <li><?= $this->Html->link(__('New Tiposervicio'), ['controller' => 'Tiposervicios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+</div>
 <div class="servicios form large-9 medium-8 columns content">
     <?= $this->Form->create($servicio) ?>
     <fieldset>
@@ -34,6 +37,6 @@
             echo $this->Form->control('precio');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'),['class' =>'btn btn-warning']) ?>
     <?= $this->Form->end() ?>
 </div>

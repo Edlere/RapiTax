@@ -4,9 +4,11 @@
  * @var \App\Model\Entity\Vehiculo $vehiculo
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<div class="top-nav large-12 medium-12 columns content">
+  <nav class="navbar navbar-expand-lg navbar-light text-white bg-dark">
+    <ul class="nav-item">
+      <a href="/rapitax/">
+      <li "nav-item"><?= $this->Html->image('logo.png')?></li></a>
         <li><?= $this->Form->postLink(
                 __('Delete'),
                 ['action' => 'delete', $vehiculo->id],
@@ -18,6 +20,7 @@
         <li><?= $this->Html->link(__('New Servicio'), ['controller' => 'Servicios', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+</div>
 <div class="vehiculos form large-9 medium-8 columns content">
     <?= $this->Form->create($vehiculo) ?>
     <fieldset>
@@ -30,6 +33,6 @@
             echo $this->Form->control('estado');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'),['class' =>'btn btn-warning']) ?>
     <?= $this->Form->end() ?>
 </div>

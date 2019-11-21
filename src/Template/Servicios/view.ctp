@@ -4,9 +4,11 @@
  * @var \App\Model\Entity\Servicio $servicio
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<div class="top-nav large-12 medium-12 columns content">
+  <nav class="navbar navbar-expand-lg navbar-light text-white bg-dark">
+    <ul class="nav-item">
+      <a href="/rapitax/">
+      <li "nav-item"><?= $this->Html->image('logo.png')?></li></a>
         <li><?= $this->Html->link(__('Edit Servicio'), ['action' => 'edit', $servicio->id]) ?> </li>
         <li><?= $this->Form->postLink(__('Delete Servicio'), ['action' => 'delete', $servicio->id], ['confirm' => __('Are you sure you want to delete # {0}?', $servicio->id)]) ?> </li>
         <li><?= $this->Html->link(__('List Servicios'), ['action' => 'index']) ?> </li>
@@ -21,6 +23,7 @@
         <li><?= $this->Html->link(__('New Tiposervicio'), ['controller' => 'Tiposervicios', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
+</div>
 <div class="servicios view large-9 medium-8 columns content">
     <h3><?= h($servicio->id) ?></h3>
     <table class="vertical-table">

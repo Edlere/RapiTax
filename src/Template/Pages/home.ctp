@@ -57,7 +57,7 @@
             <div class="top-nav">
               <nav class="navbar navbar-default">
                     <div class="collapse navbar-collapse " id="navbarCollapse">
-                      <<ul class="nav nav-pills ">
+                      <ul class="nav-item ">
                           <li><a href="#welcome" class="scroll">Inicio</a></li>
                           <li><a href="#about" class="scroll">Nosotros</a></li>
                           <li><a href="#welcome" class="scroll">Servicios</a></li>
