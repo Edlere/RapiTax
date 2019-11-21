@@ -15,6 +15,7 @@
         <li><?= $this->Html->link(__('New Cliente'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Servicios'), ['controller' => 'Servicios', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Servicio'), ['controller' => 'Servicios', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(_('Salir'),['controller'=>'Users','action' =>'logout'])?></li>
     </ul>
 </nav>
 </div>
