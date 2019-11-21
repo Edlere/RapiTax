@@ -24,7 +24,7 @@
     </ul>
 </nav>
 </div>
-<div class="servicios view large-9 medium-8 columns content">
+<div class="container">
     <h3><?= h($servicio->id) ?></h3>
     <table class="vertical-table">
         <tr>

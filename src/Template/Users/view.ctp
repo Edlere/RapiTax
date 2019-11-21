@@ -16,7 +16,7 @@
     </ul>
 </nav>
 </div>
-<div class="users view large-9 medium-8 columns content">
+<div class="container">
     <h3><?= h($user->name) ?></h3>
     <table class="vertical-table">
       <tr  class="p-3 mb-2 bg-warning text-dark">

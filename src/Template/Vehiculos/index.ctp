@@ -15,7 +15,7 @@
     </ul>
 </nav>
 </div>
-<div class="vehiculos index large-9 medium-8 columns content">
+<div class="container">
     <h3><?= __('Vehiculos') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>

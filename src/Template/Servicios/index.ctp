@@ -21,8 +21,11 @@
     </ul>
 </nav>
 </div>
-<div class="servicios index large-9 medium-8 columns content">
+<div class="container">
+<!-- <div class="servicios index large-9 medium-8 columns content"> -->
     <h3><?= __('Servicios') ?></h3>
+    <!-- <div class="table-responsive"> -->
+
     <table cellpadding="0" cellspacing="0">
         <thead>
           <tr  class="p-3 mb-2 bg-warning text-dark">

@@ -18,7 +18,7 @@
     </ul>
 </nav>
 </div>
-<div class="tiposervicios view large-9 medium-8 columns content">
+<div class="container">
     <h3><?= h($tiposervicio->id) ?></h3>
     <table class="vertical-table">
         <tr>

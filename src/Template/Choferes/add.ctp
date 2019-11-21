@@ -16,7 +16,8 @@
     </ul>
 </nav>
 </div>
-<div class="choferes form large-9 medium-8 columns content">
+<div class="choferes form large-9 medium-4 columns content">
+
     <?= $this->Form->create($chofere) ?>
     <fieldset>
         <legend><?= __('Add Chofere') ?></legend>

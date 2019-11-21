@@ -18,7 +18,7 @@
     </ul>
 </nav>
 </div>
-<div class="choferes view large-9 medium-8 columns content">
+<div class="container">
     <h3><?= h($chofere->id) ?></h3>
     <table class="vertical-table">
         <tr>
