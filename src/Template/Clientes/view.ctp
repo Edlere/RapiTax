@@ -91,7 +91,7 @@
         <h4><?= __('Related Servicios') ?></h4>
         <?php if (!empty($cliente->servicios)): ?>
         <table cellpadding="0" cellspacing="0">
-            <tr>
+          <tr  class="p-3 mb-2 bg-warning text-dark">
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Cliente Id') ?></th>
                 <th scope="col"><?= __('Chofere Id') ?></th>
