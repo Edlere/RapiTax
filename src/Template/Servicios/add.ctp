@@ -22,8 +22,9 @@
     </ul>
 </nav>
 </div>
-<div class="container-fluid">
-    <?= $this->Form->create($servicio) ?>
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">    <?= $this->Form->create($servicio) ?>
     <fieldset>
         <legend><?= __('Add Servicio') ?></legend>
         <?php

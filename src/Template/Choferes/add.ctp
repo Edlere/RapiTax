@@ -17,7 +17,9 @@
     </ul>
 </nav>
 </div>
-<div class="choferes form large-9 medium-4 columns content">
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">
 
     <?= $this->Form->create($chofere) ?>
     <fieldset>

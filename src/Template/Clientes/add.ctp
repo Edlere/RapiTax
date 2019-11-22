@@ -16,7 +16,9 @@
     </ul>
 </nav>
 </div>
-<div class="clientes form large-9 medium-8 columns content">
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">
     <?= $this->Form->create($cliente) ?>
     <fieldset>
         <legend><?= __('Add Cliente') ?></legend>

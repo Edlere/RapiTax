@@ -28,7 +28,9 @@
     </ul>
 </nav>
 </div>
-<div class="servicios form large-9 medium-8 columns content">
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">    
     <?= $this->Form->create($servicio) ?>
     <fieldset>
         <legend><?= __('Edit Servicio') ?></legend>

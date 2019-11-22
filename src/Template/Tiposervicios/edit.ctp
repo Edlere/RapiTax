@@ -22,8 +22,9 @@
     </ul>
 </nav>
 </div>
-<div class="tiposervicios form large-9 medium-8 columns content">
-    <?= $this->Form->create($tiposervicio) ?>
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">    <?= $this->Form->create($tiposervicio) ?>
     <fieldset>
         <legend><?= __('Edit Tiposervicio') ?></legend>
         <?php

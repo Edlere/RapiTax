@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
+
 <div class="top-nav large-12 medium-12 columns content">
   <nav class="navbar navbar-expand-lg navbar-light text-white bg-dark">
     <ul class="nav-item">

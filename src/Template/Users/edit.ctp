@@ -19,8 +19,9 @@
     </ul>
 </nav>
 </div>
-<div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create($user) ?>
+<div class="container">
+    <div class="row">
+<div Class="col-md-6 go-right">    <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
         <?php
