@@ -22,7 +22,7 @@
     </ul>
 </nav>
 </div>
-<div class="servicios form large-9 medium-8 columns content">
+<div class="container-fluid">
     <?= $this->Form->create($servicio) ?>
     <fieldset>
         <legend><?= __('Add Servicio') ?></legend>
