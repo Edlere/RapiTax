@@ -12,19 +12,6 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-        //aqui ponemos las rutas que serán permitidas sin necesidad de logearse, en este caso(y porque asi lo trabajan hasta esta ahora el tutorial jeje) 
-        //para que permita añadir usuarios
-
-        //Tuto method uu
-    // public function beforeFilter(Event $event)
-    // {
-    //     parent::beforeFilter($event);
-    //     $this->Auth->allow('add');
-    // }
-
-    //Sandoval Help uu
-    //Funciona :3, permite la ruta add y la ruta logout(por ahora)
-
     public function initialize()
     {
         parent::initialize();
